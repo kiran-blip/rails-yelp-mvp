@@ -1,0 +1,14 @@
+<img src="https://www.flaticon.com/free-icon/yelp_168812" alt="...">
+
+<h1 class="display-2 ms-4"> Yelp</h1>
+<br>
+<%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-outline-info ms-4"%>
+<br>
+<br>
+<ul id="restaurants">
+  <% @restaurants.each do |restaurant| %>
+    <p>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </p>
+  <% end %>
+</ul>
